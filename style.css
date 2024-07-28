@@ -111,6 +111,50 @@ img {
 
 .header {
   grid-area: header;
+  display: grid;
+  gap: 1rem;
+  grid-template-rows: 1fr 1fr;
+  padding: 1rem 2rem;
+}
+
+.header > * {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header > * > * {
+  display: flex;
+  align-items: center;
+}
+
+.header img {
+  border-radius: 50%;
+}
+
+.header-top img {
+  height: 1.5rem;
+  width: auto;
+}
+
+.user {
+  gap: 1rem;
+}
+
+.header-bottom img {
+  height: 3rem;
+  width: auto;
+}
+
+.header-buttons {
+  gap: 1rem;
+}
+
+.header button {
+  background-color: hsl(201, 79%, 46%);
+  border: none;
+  height: min-content;
+  padding: 0.5rem;
+  border-radius: 2rem;
 }
 
 .sidebar {
