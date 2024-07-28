@@ -91,6 +91,11 @@ body {
     / 1fr 4fr;
 }
 
+img {
+  height: 50px;
+  width: auto;
+}
+
 .header {
   grid-area: header;
 }
