@@ -118,6 +118,25 @@ img {
   background-color: hsl(201, 79%, 46%);
 }
 
+.sidebar * {
+  color: white;
+}
+
+.sidebar-buttons {
+  padding: 1rem;
+  display: grid;
+  gap: 0.5rem;
+  grid-template-rows: repeat(8, 1fr);
+  grid-template-columns: 1fr 4fr;
+  justify-content: center;
+  align-items: center;
+}
+
+.sidebar-buttons img {
+  width: 1rem;
+  height: auto;
+}
+
 .content {
   grid-area: content;
   background-color: hsl(214, 32%, 91%);
