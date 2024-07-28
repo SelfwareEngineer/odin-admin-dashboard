@@ -82,6 +82,10 @@ h6 {
   isolation: isolate;
 }
 
+:root {
+  --custom-box-shadow: 2px 2px 2px hsl(215, 8%, 80%);
+}
+
 @font-face {
   font-family: "Roboto";
   src:
@@ -184,4 +188,107 @@ img {
 .content {
   grid-area: content;
   background-color: hsl(214, 32%, 91%);
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 5fr 2fr;
+  padding: 1rem;
+  padding-bottom: 2.5rem;
+}
+
+.content-main,
+.content-side,
+.content-side > * {
+  display: flex;
+  flex-direction: column;
+}
+
+.content-side {
+  justify-content: space-between;
+}
+
+.content-header {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.project-cards {
+  flex-grow: 1;
+  display: grid;
+  gap: 1.5rem;
+  grid-template: repeat(3, 1fr) / 1fr 1fr;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem 0.5rem;
+  background-color: white;
+  border-radius: 4px;
+  box-shadow: var(--custom-box-shadow);
+}
+
+.project-card p {
+  font-size: 12px;
+}
+
+.card-buttons {
+  display: flex;
+  align-self: flex-end;
+}
+
+.card-buttons img {
+  height: 1rem;
+  width: auto;
+}
+
+.announcements-container,
+.trending-container {
+  flex-grow: 1;
+}
+
+.announcements-content,
+.trending-content {
+  flex-grow: 1;
+  background-color: white;
+  box-shadow: var(--custom-box-shadow);
+  border-radius: 4px;
+  display: grid;
+  justify-content: space-around;
+  padding: 0 1rem;
+}
+
+.announcement {
+  padding: 1rem;
+}
+
+.announcement ~ .announcement {
+  border-top: 1px solid hsl(215, 8%, 71%);
+}
+
+.announcements-content p {
+  font-size: 12px;
+}
+
+.trending-item {
+  display: flex;
+  padding: 1rem 1rem 0rem;
+}
+
+.trending-item:last-child {
+  padding-bottom: 1rem;
+}
+
+.trending-item img {
+  height: 1.5rem;
+  width: auto;
+}
+
+.trending-item h6 {
+  font-size: 10px;
+}
+
+.trending-item p {
+  font-size: 10px;
 }
