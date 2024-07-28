@@ -82,6 +82,19 @@ h6 {
   isolation: isolate;
 }
 
+@font-face {
+  font-family: "Roboto";
+  src:
+    url("fonts/roboto-regular-webfont.woff2") format("woff2"),
+    url("fonts/roboto-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+html {
+  font-family: "Roboto", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
 body {
   height: 100vh;
   display: grid;
