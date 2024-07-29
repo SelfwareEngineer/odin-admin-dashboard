@@ -144,8 +144,21 @@ svg {
 }
 
 .header-top img {
-  height: 1.5rem;
+  height: 1.7rem;
   width: auto;
+}
+
+.btn-container {
+  padding: 0.5rem;
+  border-radius: 50%;
+}
+
+.btn-container:hover {
+  background-color: hsl(214, 30%, 91%);
+}
+
+.btn-container:active {
+  box-shadow: inset 1px 1px 3px hsl(215, 8%, 70%);
 }
 
 .user {
@@ -156,8 +169,9 @@ svg {
   flex-grow: 1;
 }
 
-.search-container svg {
-  height: 1.5rem;
+.search-container svg,
+.user svg {
+  height: 1.2rem;
   width: auto;
 }
 
@@ -340,6 +354,7 @@ input[type="search"]:focus {
   border: 20px solid white;
   border-radius: 4px;
   display: grid;
+  gap: 0.5rem;
 }
 
 .announcement {
