@@ -101,6 +101,7 @@ html {
 
 body {
   height: 100vh;
+  min-width: 850px;
   display: grid;
   grid-template:
     "sidebar header" 1fr
@@ -289,12 +290,13 @@ input[type="search"]:focus {
 
 .content-side {
   justify-content: space-between;
+  gap: 2rem;
 }
 
 .content-header {
   font-size: 16px;
   font-weight: bold;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .project-cards {
@@ -308,8 +310,9 @@ input[type="search"]:focus {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 1rem 0.5rem;
+  padding: 1rem;
   background-color: white;
+  border-left: 5px solid hsl(42, 87%, 55%);
   border-radius: 4px;
   box-shadow: var(--custom-box-shadow);
 }
@@ -320,6 +323,7 @@ input[type="search"]:focus {
 
 .card-buttons {
   display: flex;
+  gap: 1rem;
   align-self: flex-end;
 }
 
@@ -333,18 +337,25 @@ input[type="search"]:focus {
   flex-grow: 1;
   background-color: white;
   box-shadow: var(--custom-box-shadow);
+  border: 20px solid white;
   border-radius: 4px;
   display: grid;
-  justify-content: space-around;
-  padding: 0 1rem;
 }
 
 .announcement {
-  padding: 1rem;
+  padding: 1rem 0.5rem;
 }
 
 .announcement ~ .announcement {
   border-top: 1px solid hsl(215, 8%, 71%);
+}
+
+.announcement:first-child {
+  padding-top: 0;
+}
+
+.announcement:last-child {
+  padding-bottom: 0;
 }
 
 .announcements-content p {
@@ -357,15 +368,11 @@ input[type="search"]:focus {
 
 .trending-item {
   display: flex;
-  padding: 1rem 1rem 0rem;
-}
-
-.trending-item:last-child {
-  padding-bottom: 1rem;
+  gap: 1rem;
 }
 
 .trending-item img {
-  height: 1.5rem;
+  height: 3rem;
   width: auto;
 }
 
