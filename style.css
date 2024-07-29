@@ -134,8 +134,9 @@ svg {
   gap: 0.5rem;
 }
 
-/*WARN: 
- * add SVG*/
+.header p {
+  font-weight: bold;
+}
 
 .header img {
   border-radius: 50%;
@@ -150,11 +151,6 @@ svg {
   gap: 1rem;
 }
 
-.header-bottom img {
-  height: 3rem;
-  width: auto;
-}
-
 .search-container {
   flex-grow: 1;
 }
@@ -165,11 +161,37 @@ svg {
 }
 
 input[type="search"] {
+  font-size: 12px;
   border: none;
   background-color: hsl(214, 32%, 91%);
   border-radius: 50px;
   padding: 0.5rem 1rem;
   flex-grow: 1;
+}
+
+input[type="search"]:focus-visible {
+  outline-color: transparent;
+}
+
+input[type="search"]:focus {
+  border: 3px solid hsl(201, 79%, 46%);
+}
+
+.header-bottom img {
+  height: 3rem;
+  width: auto;
+}
+
+.greeting {
+  gap: 1rem;
+}
+
+.greeting p {
+  font-size: 12px;
+}
+
+.greeting .user-name {
+  font-size: 18px;
 }
 
 .header-buttons {
@@ -178,10 +200,20 @@ input[type="search"] {
 
 .header button {
   background-color: hsl(201, 79%, 46%);
+  color: white;
+  font-size: 12px;
   border: none;
   height: min-content;
-  padding: 0.5rem;
-  border-radius: 2rem;
+  padding: 0.25rem 1rem;
+  border-radius: 25px;
+}
+
+.header button:hover {
+  background-color: hsl(201, 80%, 35%);
+}
+
+.header button:active {
+  box-shadow: inset 1px 1px 3px black;
 }
 
 .sidebar {
@@ -289,13 +321,6 @@ input[type="search"] {
 .card-buttons {
   display: flex;
   align-self: flex-end;
-}
-
-/*WARN: 
- * change image to SVG*/
-.card-buttons img {
-  height: 1rem;
-  width: auto;
 }
 
 .announcements-container,
