@@ -108,8 +108,9 @@ body {
     / 1fr 4fr;
 }
 
-img {
-  height: 50px;
+img,
+svg {
+  height: 1rem;
   width: auto;
 }
 
@@ -130,6 +131,9 @@ img {
   display: flex;
   align-items: center;
 }
+
+/*WARN: 
+ * add SVG*/
 
 .header img {
   border-radius: 50%;
@@ -168,6 +172,21 @@ img {
 
 .sidebar * {
   color: white;
+  fill: white;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0.5rem 1rem;
+}
+
+.logo img {
+  height: 1.5rem;
+  width: auto;
+  position: relative;
+  right: 0.25rem;
 }
 
 .sidebar-buttons {
@@ -180,9 +199,16 @@ img {
   align-items: center;
 }
 
+/*WARN: 
+ * change image to SVG*/
 .sidebar-buttons img {
   width: 1rem;
   height: auto;
+}
+
+.sidebar p {
+  font-size: 12px;
+  font-weight: bold;
 }
 
 .content {
@@ -238,6 +264,8 @@ img {
   align-self: flex-end;
 }
 
+/*WARN: 
+ * change image to SVG*/
 .card-buttons img {
   height: 1rem;
   width: auto;
